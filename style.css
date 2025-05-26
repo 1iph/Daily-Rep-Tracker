@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: #000;
+  color: white;
+  border-bottom: 1px solid rgb(57, 57, 57);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo i {
+  color: #00ff80;
+  font-size: 1.6rem;
+}
+
+.container {
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.editor-container {
+  margin-top: 4rem;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.editor-container h1 {
+  color: black;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.editor-container p {
+  color: #00ff6a;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.rep-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.circle-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.circle-btn:hover {
+  background-color: #00ff80;
+}
+
+.rep-count {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #00ff6a;
+  border-radius: 12px;
+  min-width: 60px;
+}
+
+.save-btn {
+  background-color: #00ff6a;
+  border: none;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #00e65b;
+}
+
+.check {
+  font-size: 1.2rem;
+}
+
+.rep-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.daily-reps-container,
+.monthly-reps-container {
+  background: #000;
+  padding: 2rem;
+  border-radius: 24px;
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 100%;
+  border: 1px solid #005724;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.daily-reps-subcontainer,
+.monthly-reps-subcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daily-reps-subcontainer h2,
+.monthly-reps-subcontainer h2 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.daily-reps-container h1,
+.monthly-reps-container h1 {
+  color: #04ff69;
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.daily-reps-subcontainer i,
+.monthly-reps-subcontainer i {
+  color: #00ff6a;
+  font-size: 1.4rem;
+}
+
+.daily-reps-container p,
+.monthly-reps-container p {
+  font-weight: 600;
+  color: #939393;
+}
+
+.clear {
+  background: black;
+  padding: 1rem 2rem;
+  color: white;
+  border: 1px solid #005724;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.clear:hover {
+  background: #00e65b;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgb(57, 57, 57);
+}
+
+footer h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #00ff6a;
+}
+
+footer h2 i {
+  color: #00ff6a;
+}
+
+/* ---------------------------------
+   MEDIA QUERIES
+-----------------------------------*/
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+  .editor-container {
+    padding: 2rem 1rem;
+  }
+
+  .circle-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.8rem;
+  }
+
+  .rep-count {
+    font-size: 1.5rem;
+  }
+
+  .save-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .daily-reps-container h1,
+  .monthly-reps-container h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .rep-controls {
+    gap: 1rem;
+  }
+
+  .circle-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .rep-count {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .save-btn {
+    font-size: 0.9rem;
+  }
+
+  .daily-reps-subcontainer,
+  .monthly-reps-subcontainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .daily-reps-subcontainer h2,
+  .monthly-reps-subcontainer h2 {
+    font-size: 1rem;
+  }
+
+  footer h2 {
+    font-size: 1rem;
+  }
+}
